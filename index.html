@@ -11,7 +11,7 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
-    <title>My weather application</title>
+    <title>Weather App Project</title>
   </head>
   <body>
     <div class="weather-app">
@@ -19,18 +19,28 @@
         <form id="search-form">
           <input
             type="search"
-            placeholder="Enter a city.."
+            placeholder="Enter a city..."
             required
             class="search-input"
             id="search-input"
           />
           <input type="submit" value="Search" class="search-button" />
         </form>
+        <main>
+            <h1>New York</h1>
+            <p>
+              Monday 16:30, scattered clouds
+              <br>
+              Humidity: 66%, Wind: 3.13km/h 
+
+            </p>
+            🌤️ 2°C
+        </main>
       </header>
       <main>
         <div class="current-weather">
           <div>
-            <h1 class="current-city" id="current-city">Paris</h1>
+            <h1 class="current-city" id="current-city">New York</h1>
             <p class="current-details">
               <span id="current-date"></span>, moderate rain <br />
               Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
@@ -44,6 +54,7 @@
           </div>
         </div>
       </main>
+
       <footer>
         <p>
           This project was coded by
