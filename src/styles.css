@@ -13,7 +13,7 @@ a {
   margin: 60px auto;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  box-shadow: 0 30px 50px rgb(98, 197, 206, 0.4);
 }
 
 .weather-logo {
@@ -29,13 +29,14 @@ header {
 }
 
 .search-input {
-  background-color: #f9f7fe;
+  background-color: rgb(73, 163, 136, 0.1);
   border: none;
-  color: rgba(39, 33, 66, 0.4);
+  color: rgba(39, 33, 66, 0.9);
   font-size: 16px;
   padding: 20px;
   width: 75%;
   border-radius: 6px;
+
 }
 
 .search-button {
