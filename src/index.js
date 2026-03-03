@@ -16,6 +16,9 @@ function displayTemperature(response) {
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   timeElement.innerHTML = formatDate(date);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="current-temperature-icon"/>`;
+
+  getForecast(response.data.city);
+
 }
 
 function search(event) {
@@ -53,6 +56,12 @@ function formatDate(date) {
   return `${day} ${hours}:${minutes}`;
 }
 
+function getForecast(city) {
+    let apiKey = "0232oa2bd084ect6f17c5fee93b97744";
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=imperial`;
+      axios.get(apiUrl).then(displayForecast);
+}
+
 function displayForecast() {
     let forecastElement = document.querySelector("#forecast");
 
@@ -78,4 +87,5 @@ function displayForecast() {
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
 
-displayForecast();
+searchCity("New York");
+displayForecast("New York");
