@@ -94,8 +94,5 @@ function displayForecast(response) {
     forecastElement.innerHTML = forecastHtml;
 }
 
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", search);
-
-searchCity("New York");
-displayForecast("New York");
+const root = ReactDOM.createRoot(document.querySelector("#root"));
+root.render(<App />);
