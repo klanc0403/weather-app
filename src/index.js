@@ -1,3 +1,10 @@
+import React, { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import axios from "axios";
+
+import App from "./App";
+import "./styles.css";
+
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#current-temperature");
   let temperature = Math.round(response.data.temperature.current);
@@ -94,5 +101,11 @@ function displayForecast(response) {
     forecastElement.innerHTML = forecastHtml;
 }
 
-const root = ReactDOM.createRoot(document.querySelector("#root"));
-root.render(<App />);
+const rootElement = document.getElementById("root");
+const root = createRoot(rootElement);
+
+root.render(
+  <StrictMode>
+    <App searchWeather={search} />
+  </StrictMode>
+);

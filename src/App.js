@@ -1,4 +1,6 @@
-function App() {
+import React from "react";
+
+export default function App({ searchWeather }) {
   return (
     <div className="weather-app">
       <header>
@@ -9,7 +11,7 @@ function App() {
           width="60"
         />
 
-        <form id="search-form" onSubmit={search}>
+        <form id="search-form" onSubmit={searchWeather}>
           <input
             type="search"
             placeholder="Enter a city..."
